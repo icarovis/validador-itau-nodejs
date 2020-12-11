@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Validar CPF</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Validação de CPF junto com a turma 12A utilizando jasmine e cucumber</h1>
+    <hr>
+
+    <form action="">
+      <fieldset>
+        <legend>Cliente:</legend>
+        <label for="nome">Nome:</labexl>
+        <input type="text" id="nome" name="nome"><br><br>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf"><br><br>
+        <input type="submit" name="enviar" value="Validar">
+      </fieldset>
+
+      <% if( valido ) { %>
+        <div id="sucesso" style="color:green">CPF é valido</div>
+      <% } else { %>
+        <div id="erro" style="color:red">CPF é invalido</div>
+      <% } %>
+    </form>
   </body>
 </html>
