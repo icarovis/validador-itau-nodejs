@@ -1,4 +1,4 @@
-const Cliente = require('../../models/Cliente')
+const Cliente = require('../../models/cliente')
  
 describe('Clientes', ()=> {
   it('Validar os atributos de um cliente, ID, Nome, CPF', async () => {
