@@ -4,7 +4,7 @@ const path = require('path');
 const { ServiceBuilder } = require('selenium-webdriver/chrome');
 const {Builder, By, Key, until} = require('selenium-webdriver');
 
-const geckoDriverPath = "driver/chromedriver"
+const geckoDriverPath = "driver/chromedriver.exe"
 const serviceBuilder = new ServiceBuilder(geckoDriverPath);
 
 const driver = new Builder().forBrowser('chrome').setChromeService(serviceBuilder).build();

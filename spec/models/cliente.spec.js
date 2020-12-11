@@ -14,6 +14,15 @@ describe('Clientes', ()=> {
     expect(cliente.validarCPF()).toEqual(true)
   });
 
+  it('CPF inválido 1111111111', async () => {
+    let cliente = new Cliente(1, 'Danilo', '111.111.111-11');
+    expect(cliente.validarCPF()).toEqual(false)
+  });
+
+  it('CPF caracter maior que 11 digitos', async () => {
+    let cliente = new Cliente(1, 'Danilo', '111.111.111-1111111');
+    expect(cliente.validarCPF()).toEqual(false)
+  });
 
   it('CPF inválido', async () => {
     let cliente = new Cliente(1, 'Danilo', '709.251.970-51');

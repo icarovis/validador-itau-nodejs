@@ -12,6 +12,8 @@ module.exports = class Cliente{
     var resto;
     soma = 0;
     if (strCPF == "00000000000") return false;
+    if (strCPF == "11111111111") return false;
+    if (strCPF.length > 11) return false;
 
     for (let i = 1; i <= 9; i++) soma = soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
     resto = (soma * 10) % 11;
